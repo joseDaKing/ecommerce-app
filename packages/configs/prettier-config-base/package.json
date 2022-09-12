@@ -1,0 +1,15 @@
+{
+    "name": "@org/prettier-config-base",
+    "main": ".prettierrc.json",
+    "private": true,
+    "files": [
+        ".prettierrc.json"
+    ],
+    "scripts": {
+        "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "prettier": ">=2.7.1"
+    }
+}

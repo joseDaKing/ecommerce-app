@@ -1,0 +1,22 @@
+{
+    "name": "ecommerce-app",
+    "private": true,
+    "scripts": {
+        "postinstall": "npm run post_install -w @org/cms",
+        "lint": "npm run lint -ws --if-present",
+        "format": "npx prettier --ignore-path .prettierignore --write *.json && npm run format -ws"
+    },
+    "dependencies": {
+        "graphql": "^15.8.0"
+    },
+    "workspaces": [
+        "apps/web",
+        "apps/cms",
+        "packages/configs/eslint-config-base",
+        "packages/configs/eslint-config-react",
+        "packages/configs/eslint-config-next",
+        "packages/configs/prettier-config-base",
+        "packages/configs/typescript-config-base"
+    ],
+    "prettier": "@org/prettier-config-base"
+}

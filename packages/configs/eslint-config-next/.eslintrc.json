@@ -1,0 +1,16 @@
+{
+    "extends": "@org/eslint-config-react",
+    "overrides": [
+        {
+            "files": "**/*.{jsx,tsx}",
+            "extends": "plugin:@next/next/recommended"
+        },
+        {
+            "files": "**/*.{tsx,jsx}",
+            "extends": ["plugin:unicorn/all", "prettier"],
+            "rules": {
+                "prettier/prettier": "error"
+            }
+        }
+    ]
+}

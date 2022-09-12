@@ -1,0 +1,12 @@
+{
+    "name": "@org/typescript-config-base",
+    "main": "tsconfig.json",
+    "private": true,
+    "files": [
+        "tsconfig.json"
+    ],
+    "scripts": {
+        "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"
+    },
+    "license": "MIT"
+}

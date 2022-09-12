@@ -1,0 +1,17 @@
+{
+    "extends": "@org/eslint-config-base",
+    "overrides": [
+        {
+            "files": "**/*.{tsx,jsx}",
+            "extends": "xo-react"
+        },
+        {
+            "files": "**/*.{tsx,jsx}",
+            "extends": ["plugin:unicorn/all", "prettier"],
+            "rules": {
+                "react/react-in-jsx-scope": "off",
+                "prettier/prettier": "error"
+            }
+        }
+    ]
+}

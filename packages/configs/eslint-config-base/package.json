@@ -1,0 +1,26 @@
+{
+    "name": "@org/eslint-config-base",
+    "main": ".eslintrc.json",
+    "private": true,
+    "files": [
+        ".eslintrc.json"
+    ],
+    "scripts": {
+        "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-xo": "^0.42.0",
+        "eslint-config-xo-typescript": "^0.53.0",
+        "eslint-plugin-unicorn": ">=43.0.2"
+    },
+    "peerDependencies": {
+        "@typescript-eslint/eslint-plugin": ">=5.36.2",
+        "@typescript-eslint/parser": ">=5.36.2",
+        "eslint": ">=8.23.0",
+        "typescript": ">=4.8.3",
+        "prettier": ">=2.7.1",
+        "eslint-plugin-prettier": ">=4.2.1"
+    }
+}

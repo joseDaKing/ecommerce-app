@@ -1,0 +1,26 @@
+{
+    "plugins": ["prettier", "unicorn"],
+    "overrides": [
+        {
+            "files": "**/*.{ts,js,tsx,jsx}",
+            "extends": "xo"
+        },
+        {
+            "files": "**/*.{ts,tsx}",
+            "extends": "xo-typescript",
+            "settings": {
+                "parserOptions": {
+                    "tsconfigRootDir": "./",
+                    "project": "./tsconfig.json"
+                }
+            }
+        },
+        {
+            "files": "**/*.{ts,js,tsx,jsx}",
+            "extends": ["plugin:unicorn/all", "prettier"],
+            "rules": {
+                "prettier/prettier": "error"
+            }
+        }
+    ]
+}

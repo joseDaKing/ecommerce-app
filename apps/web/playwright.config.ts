@@ -1,7 +1,1 @@
-import type { PlaywrightTestConfig } from "@playwright/test";
-
-const config: PlaywrightTestConfig = {
-    testMatch: "e2e/**/*.test.{ts,tsx}",
-};
-
-export default config;
+export { playWrightTestConfig as default } from "@org/playwright-config-base";

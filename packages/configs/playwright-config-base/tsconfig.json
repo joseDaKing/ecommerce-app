@@ -1,0 +1,4 @@
+{
+    "extends": "@org/typescript-config-base",
+    "include": ["*.ts", "**/*.ts"]
+}

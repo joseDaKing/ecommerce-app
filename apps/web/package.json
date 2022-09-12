@@ -1,0 +1,24 @@
+{
+    "name": "@org/web",
+    "private": true,
+    "devDependencies": {
+        "@org/eslint-config-next": "*",
+        "@types/node": "^18.7.16",
+        "@types/react": "^18.0.19",
+        "@types/react-dom": "^18.0.6"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
+        "format": "npx prettier --ignore-path ../../.prettierignore --write *.json"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "next": "^12.3.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    }
+}

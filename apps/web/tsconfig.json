@@ -1,0 +1,12 @@
+{
+    "extends": "@org/typescript-config-base",
+    "compilerOptions": {
+        "target": "ES5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "resolveJsonModule": true,
+        "jsx": "preserve"
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
+}

@@ -3,7 +3,8 @@
     "private": true,
     "scripts": {
         "postinstall": "npm run post_install -w @org/cms",
-        "lint": "npm run lint -ws --if-present",
+        "commit": "npx commit",
+        "lint": "npx eslint --fix --ignore-path .eslintignore *.{js,ts} && npm run lint -ws --if-present",
         "format": "npx prettier --ignore-path .prettierignore --write *.json && npm run format -ws"
     },
     "workspaces": [
@@ -20,5 +21,10 @@
     "dependencies": {
         "graphql": "^15.8.0",
         "next": "^12.2.4"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^17.1.2",
+        "@commitlint/config-conventional": "^17.1.0",
+        "@commitlint/prompt-cli": "^17.1.2"
     }
 }

@@ -9,7 +9,8 @@
         "format": "npx prettier --ignore-path .prettierignore --write *.json && npm run format -ws"
     },
     "dependencies": {
-        "graphql": "^15.8.0"
+        "graphql": "^15.8.0",
+        "next": "^12.2.4"
     },
     "workspaces": [
         "apps/web",

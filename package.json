@@ -21,5 +21,8 @@
         "packages/configs/prettier-config-base",
         "packages/configs/typescript-config-base"
     ],
-    "prettier": "@org/prettier-config-base"
+    "prettier": "@org/prettier-config-base",
+    "devDependencies": {
+        "@playwright/test": "^1.25.2"
+    }
 }

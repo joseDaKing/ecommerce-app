@@ -8,10 +8,6 @@
         "lint": "npm run lint -ws --if-present",
         "format": "npx prettier --ignore-path .prettierignore --write *.json && npm run format -ws"
     },
-    "dependencies": {
-        "graphql": "^15.8.0",
-        "next": "^12.2.4"
-    },
     "workspaces": [
         "apps/web",
         "apps/cms",
@@ -19,9 +15,14 @@
         "packages/configs/eslint-config-react",
         "packages/configs/eslint-config-next",
         "packages/configs/prettier-config-base",
-        "packages/configs/typescript-config-base"
+        "packages/configs/typescript-config-base",
+        "packages/configs/playwright-config-base"
     ],
     "prettier": "@org/prettier-config-base",
+    "dependencies": {
+        "graphql": "^15.8.0",
+        "next": "^12.2.4"
+    },
     "devDependencies": {
         "@playwright/test": "^1.25.2"
     }

@@ -1,0 +1,15 @@
+{
+    "name": "@org/playwright-config-base",
+    "main": "playwright.config.ts",
+    "private": true,
+    "files": [
+        "playwright.config.ts"
+    ],
+    "scripts": {
+        "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "peerDependencies": {
+        "@playwright/test": ">=1.25.2"
+    }
+}

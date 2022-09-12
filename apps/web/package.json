@@ -5,11 +5,13 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
+        "test": "npx playwright test",
         "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
         "format": "npx prettier --ignore-path ../../.prettierignore --write *.json"
     },
     "license": "MIT",
     "dependencies": {
+        "@playwright/test": "^1.25.2",
         "next": "^12.3.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0"

@@ -22,8 +22,5 @@
     "dependencies": {
         "graphql": "^15.8.0",
         "next": "^12.2.4"
-    },
-    "devDependencies": {
-        "@playwright/test": "^1.25.2"
     }
 }

@@ -16,11 +16,13 @@
     "dependencies": {
         "next": "^12.3.0",
         "react": "^18.2.0",
-        "react-dom": "^18.2.0"
+        "react-dom": "^18.2.0",
+        "uninstall": "^0.0.0"
     },
     "devDependencies": {
         "@org/eslint-config-next": "*",
-        "@org/jest-config-base": "*",
+        "@org/jest-config-next": "*",
+        "@org/typescript-config-base": "*",
         "@types/node": "^18.7.16",
         "@types/react": "^18.0.19",
         "@types/react-dom": "^18.0.6"

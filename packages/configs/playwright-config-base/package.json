@@ -11,5 +11,9 @@
     "license": "MIT",
     "peerDependencies": {
         "@playwright/test": ">=1.25.2"
+    },
+    "devDependencies": {
+        "@org/eslint-config-base": "*",
+        "@org/typescript-config-base": "*"
     }
 }

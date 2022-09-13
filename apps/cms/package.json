@@ -5,6 +5,7 @@
         "dev": "keystone dev",
         "build": "keystone build",
         "start": "keystone start",
+        "check": "npx tsc --project tsconfig.json --noEmit",
         "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
         "format": "npx prettier --ignore-path ../../.prettierignore --write *.json",
         "post_install": "keystone postinstall"

@@ -3,7 +3,7 @@
     "private": true,
     "scripts": {
         "postinstall": "npm run post_install -w @org/cms",
-        "commit": "npm run check && npm run format && npm run lint && npx commit",
+        "commit": "npx commit",
         "check": "npm run check -ws --if-present",
         "test": "npm run test -ws --if-present",
         "lint": "npx eslint --fix --ignore-path .eslintignore '*.{js,ts}' && npm run lint -ws --if-present",

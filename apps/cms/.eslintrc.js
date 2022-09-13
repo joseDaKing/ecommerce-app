@@ -6,7 +6,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: [".eslintrc.js"],
+            files: [".eslintrc.js", "jest.config.js"],
             rules: {
                 "unicorn/prefer-module": "off",
             },

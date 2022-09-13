@@ -6,6 +6,7 @@
         "build": "keystone build",
         "start": "keystone start",
         "check": "npx tsc --project tsconfig.json --noEmit",
+        "test": "npx jest",
         "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
         "format": "npx prettier --ignore-path ../../.prettierignore --write *.json",
         "post_install": "keystone postinstall"
@@ -13,5 +14,10 @@
     "license": "MIT",
     "dependencies": {
         "@keystone-6/core": "^2.2.0"
+    },
+    "devDependencies": {
+        "@org/eslint-config-next": "*",
+        "@org/jest-config-typescript": "*",
+        "@org/typescript-config-base": "*"
     }
 }

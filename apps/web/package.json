@@ -6,7 +6,9 @@
         "build": "next build",
         "start": "next start",
         "check": "npx tsc --project tsconfig.json --noEmit",
-        "test": "npx playwright test",
+        "test": "npm run test:unit && npm run test:e2e",
+        "test:unit": "npx jest",
+        "test:e2e": "npx playwright test",
         "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
         "format": "npx prettier --ignore-path ../../.prettierignore --write *.json"
     },
@@ -18,6 +20,7 @@
     },
     "devDependencies": {
         "@org/eslint-config-next": "*",
+        "@org/jest-config-base": "*",
         "@types/node": "^18.7.16",
         "@types/react": "^18.0.19",
         "@types/react-dom": "^18.0.6"

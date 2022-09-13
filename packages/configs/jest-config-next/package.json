@@ -1,0 +1,24 @@
+{
+    "name": "@org/jest-config-next",
+    "main": "jest.config.js",
+    "private": true,
+    "files": [
+        "jest.config.js"
+    ],
+    "scripts": {
+        "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@org/eslint-config-base": "*"
+    },
+    "eslintConfig": {
+        "extends": "@org/eslint-config-base",
+        "rules": {
+            "unicorn/prefer-module": "off"
+        }
+    },
+    "dependencies": {
+        "@org/jest-config-base": "*"
+    }
+}

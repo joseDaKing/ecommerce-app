@@ -6,7 +6,7 @@ module.exports = {
     },
     overrides: [
         {
-            files: [".eslintrc.js", "next.config.js"],
+            files: [".eslintrc.js", "next.config.js", "jest.config.js"],
             rules: {
                 "unicorn/prefer-module": "off",
             },

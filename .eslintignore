@@ -11,10 +11,9 @@
 **/*/coverage
 
 # next.js
-/.next/
 **/*/.next/
-/out/
 **/*/out/
+**/*/.swc
 
 # production
 /build

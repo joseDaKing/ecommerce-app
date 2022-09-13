@@ -3,7 +3,7 @@
     "main": ".lintstagedrc.js",
     "private": true,
     "files": [
-        "lintstagedrcc.jn"
+        ".lintstagedrc.js"
     ],
     "scripts": {
         "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"

@@ -1,0 +1,15 @@
+{
+    "name": "@org/eslint-config-node",
+    "main": ".eslintrc.json",
+    "private": true,
+    "files": [
+        ".eslintrc.json"
+    ],
+    "scripts": {
+        "format": "npx prettier --ignore-path ../../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@org/eslint-config-base": "*"
+    }
+}

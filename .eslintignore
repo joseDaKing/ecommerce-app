@@ -1,5 +1,3 @@
-!.*
-
 # dependencies
 /node_modules
 **/*/node_modules
@@ -40,3 +38,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# keystone
+keystone.db
+.keystone
+**/*/.keystone/

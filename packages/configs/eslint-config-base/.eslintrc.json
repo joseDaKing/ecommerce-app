@@ -19,7 +19,8 @@
             "files": "**/*.{ts,js,tsx,jsx}",
             "extends": ["plugin:unicorn/all", "prettier"],
             "rules": {
-                "prettier/prettier": "error"
+                "prettier/prettier": "error",
+                "no-useless-return": "off"
             }
         }
     ]

@@ -12,6 +12,11 @@
     "peerDependencies": {
         "@playwright/test": ">=1.25.2"
     },
+    "peerDependenciesMeta": {
+        "@playwright/test": {
+            "optional": false
+        }
+    },
     "devDependencies": {
         "@org/eslint-config-base": "*",
         "@org/typescript-config-base": "*"

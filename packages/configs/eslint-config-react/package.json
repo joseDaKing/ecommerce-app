@@ -10,8 +10,16 @@
     },
     "license": "MIT",
     "peerDependencies": {
-        "eslint-plugin-react": ">=7.31.8",
-        "eslint-plugin-react-hooks": ">=4.6.0"
+        "eslint-plugin-react": "^7.31.8",
+        "eslint-plugin-react-hooks": "^4.6.0"
+    },
+    "peerDependenciesMeta": {
+        "eslint-plugin-react": {
+            "optional": false
+        },
+        "eslint-plugin-react-hooks": {
+            "optional": false
+        }
     },
     "dependencies": {
         "@org/eslint-config-base": "*",

@@ -10,7 +10,12 @@
     },
     "license": "MIT",
     "peerDependencies": {
-        "@next/eslint-plugin-next": ">=12.3.0"
+        "@next/eslint-plugin-next": "^12.3.0"
+    },
+    "peerDependenciesMeta": {
+        "@next/eslint-plugin-next": {
+            "optional": false
+        }
     },
     "dependencies": {
         "@org/eslint-config-react": "*"

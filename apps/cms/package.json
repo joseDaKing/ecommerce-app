@@ -2,14 +2,14 @@
     "name": "@org/cms",
     "private": true,
     "scripts": {
-        "dev": "keystone dev",
+        "dev": "npm run generate_schemas && keystone dev",
         "build": "keystone build",
         "start": "keystone start",
         "check": "npx tsc --project tsconfig.json --noEmit",
         "test": "npx jest",
         "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
         "format": "npx prettier --ignore-path ../../.prettierignore --write *.json",
-        "post_install": "keystone postinstall"
+        "generate_schemas": "keystone postinstall"
     },
     "license": "MIT",
     "dependencies": {

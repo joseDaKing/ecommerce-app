@@ -1,7 +1,11 @@
 {
     "extends": "@org/typescript-config-base",
     "compilerOptions": {
-        "target": "ES5"
+        "target": "ES5",
+        "baseUrl": "./",
+        "paths": {
+            ".keystone": ["./node_modules/.keystone"]
+        }
     },
     "include": ["**/*.ts"],
     "exclude": ["node_modules"]

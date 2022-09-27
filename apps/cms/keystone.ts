@@ -1,5 +1,6 @@
-import { config, list } from "@keystone-6/core";
-import { text, integer } from "@keystone-6/core/fields";
+import { config } from "@keystone-6/core";
+
+import * as lists from "./schemas";
 
 export default config({
     server: {
@@ -9,12 +10,16 @@ export default config({
         provider: "sqlite",
         url: "file:./keystone.db",
     },
-    lists: {
-        user: list({
-            fields: {
-                name: text(),
-                age: integer(),
+    storage: {
+        imageStorage: {
+            kind: "local",
+            type: "image",
+            generateUrl: (path) => `http://localhost:3001/images${path}`,
+            serverRoute: {
+                path: "/images",
             },
-        }),
+            storagePath: "public/images",
+        },
     },
+    lists,
 });

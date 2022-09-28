@@ -1,7 +1,13 @@
 import { graphql, list } from "@keystone-6/core";
 import { checkbox, relationship, virtual } from "@keystone-6/core/fields";
-import { addressMixin, archiveMixin, timestampMixin } from "../mixins";
+import {
+    addressMixin,
+    archiveMixin,
+    timestampMixin,
+    archiveUiMixin,
+} from "../mixins";
 import type { Lists, Context } from ".keystone/types";
+import type { ListHookArguments } from "../utilities";
 import { isRelationshipDefinedValidator } from "../utilities";
 
 export const order: Lists.order = list({
@@ -80,14 +86,39 @@ export const order: Lists.order = list({
         ...timestampMixin(),
     },
     ui: {
-        itemView: {
-            defaultFieldMode(arguments_) {
-                const { item } = arguments_;
-
-                const { archived } = item;
-
-                return archived ? "read" : "edit";
-            },
-        },
+        ...archiveUiMixin(),
+    },
+    hooks: {
+        afterOperation: removeAllRelatedOrderItems,
     },
 });
+
+async function removeAllRelatedOrderItems(
+    arguments_: ListHookArguments<Lists.order.TypeInfo, "afterOperation">
+) {
+    const { originalItem, context, operation } = arguments_;
+
+    if (operation === "delete") {
+        const orders = await context.db.orderItem.findMany({
+            where: {
+                order: {
+                    id: {
+                        equals: originalItem.id,
+                    },
+                },
+            },
+        });
+
+        const ids = orders.filter(({ id }) => id);
+
+        const isEmpty = ids.length === 0;
+
+        if (isEmpty) {
+            return;
+        }
+
+        await context.db.orderItem.deleteMany({
+            where: ids,
+        });
+    }
+}

@@ -1,10 +1,10 @@
 import { graphql, list } from "@keystone-6/core";
 import { checkbox, relationship, virtual } from "@keystone-6/core/fields";
 import {
-    addressMixin,
     archiveMixin,
     timestampMixin,
     archiveUiMixin,
+    orderCredentialsMixin,
 } from "../mixins";
 import type { Lists, Context } from ".keystone/types";
 import type { ListHookArguments } from "../utilities";
@@ -77,7 +77,7 @@ export const order: Lists.order = list({
                 validateInput: isRelationshipDefinedValidator(),
             },
         }),
-        ...addressMixin(),
+        ...orderCredentialsMixin(),
         ...archiveMixin(),
         orderItems: relationship({
             ref: "orderItem.order",

@@ -1,0 +1,29 @@
+{
+    "name": "@org/backend",
+    "private": true,
+    "scripts": {
+        "dev": "npm run clean && nodemon --watch src/index.ts",
+        "build": "npm run clean && npx tsc --project tsconfig.json",
+        "clean": "rm -f tsconfig.tsbuildinfo",
+        "start": "node build/index.js",
+        "check": "npx tsc --project tsconfig.json --noEmit",
+        "test": "npx jest",
+        "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
+        "format": "npx prettier --ignore-path ../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@org/eslint-config-base": "*",
+        "@org/jest-config-typescript": "*",
+        "@org/typescript-config-base": "*",
+        "@types/node": "^18.7.23",
+        "nodemon": "^2.0.20",
+        "ts-node": "^10.9.1"
+    },
+    "dependencies": {
+        "@trpc/server": "^10.0.0-proxy-beta.9",
+        "superjson": "^1.10.0",
+        "zod": "^3.19.1"
+    },
+    "prettier": "@org/prettier-config-base"
+}

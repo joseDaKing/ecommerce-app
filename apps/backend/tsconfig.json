@@ -1,0 +1,15 @@
+{
+    "extends": "@org/typescript-config-base",
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "CommonJS",
+        "isolatedModules": false,
+        "rootDir": "src",
+        "outDir": "build",
+        "baseUrl": ".",
+        "paths": {
+            "@/trcp": ["src/trcp"]
+        }
+    },
+    "exclude": ["node_modules"]
+}

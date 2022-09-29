@@ -22,6 +22,7 @@
         "moduleResolution": "Node",
         "baseUrl": "./packages",
         "skipLibCheck": true,
-        "noEmit": true
+        "noEmit": false,
+        "noEmitOnError": true
     }
 }

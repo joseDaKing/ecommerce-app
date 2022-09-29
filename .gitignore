@@ -38,9 +38,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# keystone
-keystone.db
-.keystone
-**/*/.keystone/
-apps/cms/public

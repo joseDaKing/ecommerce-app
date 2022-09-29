@@ -8,7 +8,6 @@
         "test": "npm run test -ws --if-present",
         "lint": "npx eslint --fix --ignore-path .eslintignore '*.{js,ts}' && npm run lint -ws --if-present",
         "format": "npx prettier --ignore-path .prettierignore --write *.json && npm run format -ws --if-present",
-        "postinstall": "npm run generate_schemas -w @org/cms",
         "_pre_commit": "npm run format && npm run lint && npm run check",
         "_commit_msg": "npx --no -- commitlint --edit \"$1\"",
         "commit": "npx commit",
@@ -16,7 +15,7 @@
     },
     "workspaces": [
         "apps/web",
-        "apps/cms",
+        "apps/backend",
         "packages/configs/eslint-config-base",
         "packages/configs/eslint-config-react",
         "packages/configs/eslint-config-next",

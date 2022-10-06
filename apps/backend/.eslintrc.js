@@ -11,5 +11,11 @@ module.exports = {
                 "unicorn/prefer-module": "off",
             },
         },
+        {
+            files: "*.ts",
+            rules: {
+                "new-cap": "off",
+            },
+        },
     ],
 };

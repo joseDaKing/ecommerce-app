@@ -6,10 +6,8 @@
         "isolatedModules": false,
         "rootDir": "src",
         "outDir": "build",
-        "baseUrl": ".",
-        "paths": {
-            "@/trcp": ["src/trcp"]
-        }
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "exclude": ["node_modules"]
 }

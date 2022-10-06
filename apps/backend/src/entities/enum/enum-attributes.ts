@@ -7,4 +7,5 @@ export type EnumAttributes = BaseAttributes & {
 
 export type EnumValueAttributes = BaseAttributes & {
     name: string;
+    _parentId: string;
 };

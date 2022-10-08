@@ -3,12 +3,20 @@ import type {
     SchemaAttributes,
     SchemaPropertyAttributes,
 } from "./schema-attributes";
-import { Entity, Unique, Column, OneToMany, ManyToOne } from "typeorm";
+import {
+    Entity,
+    Unique,
+    Column,
+    OneToMany,
+    ManyToOne,
+    BeforeRemove,
+} from "typeorm";
 import type { EnumAttributes } from "../enum/enum-attributes";
+import { Id } from "../id";
 
 @Entity()
 @Unique(["key", "_parentId"])
-export class SchemaProperty extends Base implements SchemaPropertyAttributes {
+export class SchemaProperty extends Id implements SchemaPropertyAttributes {
     @Column()
     key!: string;
 
@@ -18,7 +26,7 @@ export class SchemaProperty extends Base implements SchemaPropertyAttributes {
     @Column()
     type!: "string" | "boolean" | "enum" | "integer" | "decimal";
 
-    @ManyToOne("Enum", "id", { nullable: false })
+    @ManyToOne("Enum", "id")
     enum?: Promise<EnumAttributes>;
 }
 
@@ -29,4 +37,11 @@ export class Schema extends Base implements SchemaAttributes {
 
     @OneToMany("SchemaProperty", "id")
     schemaProperties!: Promise<SchemaPropertyAttributes[]>;
+
+    @BeforeRemove()
+    async _beforeRemove(): Promise<void> {
+        const schemaProperties = await this.schemaProperties;
+
+        await SchemaProperty.remove(schemaProperties);
+    }
 }

@@ -1,6 +1,6 @@
-import type { BaseAttributes } from "../base/base-attributes";
+import type { IdAttributes } from "../id/id-attributes";
 
-export type PropertyAttributes = BaseAttributes & {
+export type PropertyAttributes = IdAttributes & {
     key: string;
     _parentId: string;
     valueString?: string;

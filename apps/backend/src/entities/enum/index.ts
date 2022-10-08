@@ -1,10 +1,10 @@
-import { Base } from "../base";
 import type { EnumAttributes, EnumValueAttributes } from "./enum-attributes";
-import { Entity, Column, OneToMany, Unique } from "typeorm";
+import { Entity, Column, OneToMany, Unique, BeforeRemove } from "typeorm";
+import { Id } from "../id";
 
 @Entity()
 @Unique(["name", "_parentId"])
-export class EnumValue extends Base implements EnumValueAttributes {
+export class EnumValue extends Id implements EnumValueAttributes {
     @Column({ unique: true })
     name!: string;
 
@@ -13,10 +13,17 @@ export class EnumValue extends Base implements EnumValueAttributes {
 }
 
 @Entity()
-export class Enum extends Base implements EnumAttributes {
+export class Enum extends Id implements EnumAttributes {
     @Column()
     name!: string;
 
     @OneToMany("EnumValue", "id")
     enumValues!: Promise<EnumValueAttributes[]>;
+
+    @BeforeRemove()
+    async _beforeRemove(): Promise<void> {
+        const enumValues = await this.enumValues;
+
+        await EnumValue.remove(enumValues);
+    }
 }

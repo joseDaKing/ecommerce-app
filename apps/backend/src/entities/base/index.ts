@@ -1,17 +1,9 @@
-import {
-    BaseEntity,
-    PrimaryGeneratedColumn,
-    CreateDateColumn,
-    DeleteDateColumn,
-    UpdateDateColumn,
-} from "typeorm";
+import { CreateDateColumn, DeleteDateColumn, UpdateDateColumn } from "typeorm";
+import { Id } from "../id";
 
 import type { BaseAttributes } from "./base-attributes";
 
-export abstract class Base extends BaseEntity implements BaseAttributes {
-    @PrimaryGeneratedColumn("uuid")
-    readonly id!: string;
-
+export abstract class Base extends Id implements BaseAttributes {
     @CreateDateColumn()
     readonly createdAt!: Date;
 

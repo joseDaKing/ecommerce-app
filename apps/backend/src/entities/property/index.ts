@@ -1,10 +1,10 @@
-import { Base } from "../base";
 import type { PropertyAttributes } from "./property-attributes";
 import { Entity, Unique, Column } from "typeorm";
+import { Id } from "../id";
 
 @Entity()
 @Unique(["key", "_parentId"])
-export class Property extends Base implements PropertyAttributes {
+export class Property extends Id implements PropertyAttributes {
     @Column()
     key!: string;
 

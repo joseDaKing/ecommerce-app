@@ -6,6 +6,10 @@ export type ItemPriceAttributes = {
     itemPrice(): Promise<number>;
 };
 
+export type AmountAttributes = {
+    amount: number;
+};
+
 export type LocationAttributes = {
     address: string;
     postCode: string;

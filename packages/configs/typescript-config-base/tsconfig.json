@@ -20,9 +20,10 @@
         "forceConsistentCasingInFileNames": true,
         "module": "ESNext",
         "moduleResolution": "Node",
-        "baseUrl": "./packages",
         "skipLibCheck": true,
         "noEmit": false,
-        "noEmitOnError": true
+        "noEmitOnError": true,
+        "declaration": true,
+        "sourceMap": true
     }
 }

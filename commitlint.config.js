@@ -10,7 +10,7 @@
 const scopeEnum = [
     2,
     "always",
-    ["component", "page", "cms", "script", "config"],
+    ["component", "page", "cms", "script", "config", "lib"],
 ];
 
 /**

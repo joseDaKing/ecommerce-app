@@ -1,0 +1,17 @@
+{
+    "name": "@org/shared",
+    "private": true,
+    "scripts": {
+        "check": "npx tsc --project tsconfig.json --noEmit",
+        "test": "npx jest",
+        "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
+        "format": "npx prettier --ignore-path ../../.prettierignore --write *.json"
+    },
+    "license": "MIT",
+    "prettier": "@org/prettier-config-base",
+    "devDependencies": {
+        "@org/eslint-config-base": "*",
+        "@org/jest-config-typescript": "*",
+        "@org/typescript-config-base": "*"
+    }
+}

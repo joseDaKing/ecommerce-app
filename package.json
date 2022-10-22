@@ -24,7 +24,8 @@
         "packages/configs/jest-config-typescript",
         "packages/configs/prettier-config-base",
         "packages/configs/typescript-config-base",
-        "packages/configs/playwright-config-base"
+        "packages/configs/playwright-config-base",
+        "packages/shared"
     ],
     "dependencies": {
         "graphql": "15.8.0",

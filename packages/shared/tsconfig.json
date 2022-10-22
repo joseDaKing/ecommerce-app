@@ -1,0 +1,14 @@
+{
+    "extends": "@org/typescript-config-base",
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "CommonJS",
+
+        "rootDir": "src",
+        "outDir": "build",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "baseUrl": "./"
+    },
+    "exclude": ["node_modules"]
+}

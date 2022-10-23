@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prevent-abbreviations */
 const jestConfigTypescript = require("@org/jest-config-typescript");
 
 /**
@@ -5,6 +6,6 @@ const jestConfigTypescript = require("@org/jest-config-typescript");
  */
 module.exports = {
     ...jestConfigTypescript,
-    testPathIgnorePatterns: ["e2e"],
-    testMatch: ["**/*.test.{js,ts,jsx,tsx}"],
+    testPathIgnorePatterns: [],
+    testMatch: ["**/e2e/**/*.test.{js,ts}"],
 };

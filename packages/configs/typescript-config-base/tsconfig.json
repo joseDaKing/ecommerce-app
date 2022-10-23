@@ -25,6 +25,5 @@
         "noEmitOnError": true,
         "declaration": true,
         "sourceMap": true
-    },
-    "exclude": ["./node_modules", "./build"]
+    }
 }

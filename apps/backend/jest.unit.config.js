@@ -6,5 +6,5 @@ const jestConfigTypescript = require("@org/jest-config-typescript");
 module.exports = {
     ...jestConfigTypescript,
     testPathIgnorePatterns: ["e2e"],
-    testMatch: ["**/*.test.{js,ts,jsx,tsx}"],
+    testMatch: ["**/*.test.{js,ts}"],
 };

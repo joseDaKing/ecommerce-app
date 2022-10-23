@@ -7,11 +7,7 @@
 /**
  * @type {RulesConfig["scope-enum"]}
  */
-const scopeEnum = [
-    2,
-    "always",
-    ["component", "page", "cms", "script", "config", "lib"],
-];
+const scopeEnum = [2, "always", ["web", "backend", "configs", "shared"]];
 
 /**
  * @type {import("@commitlint/types").UserConfig}

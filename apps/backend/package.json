@@ -7,7 +7,12 @@
         "debug": "nest start --debug --watch",
         "start": "node ./build/main",
         "check": "npx tsc --project tsconfig.json --noEmit",
-        "test": "npx jest",
+        "test": "npm run test:unit && test:e2e",
+        "test:unit-watch": "npx jest --watch --config ./jest.unit.config.js",
+        "test:unit": "npx jest --config ./jest.unit.config.js",
+        "test:e2e-watch": "npx --watch jest --config ./jest.e2e.config.js",
+        "test:e2e": "npx jest --config ./jest.e2e.config.js",
+        "test:coverage": "npx jest --coverage",
         "lint": "npx eslint --fix --ignore-path ../../.eslintignore --config .eslintrc.js '**/*.{ts,js,tsx,jsx}'",
         "format": "npx prettier --ignore-path ../../.prettierignore --write *.json"
     },
